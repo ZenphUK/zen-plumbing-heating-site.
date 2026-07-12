@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plumbing & Heating | ZEN Property Services – Gravesend & Kent</title>
+  <meta name="description" content="Founder-led plumbing, heating and home improvement services with 20+ years of experience across Dartford, Gravesend, Bexley and surrounding areas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="homepage-v2.css" />
+    <link rel="stylesheet" href="homepage-v3-overrides.css" />
+  <style>
+.plh-shell { padding: 40px 0 84px; }
+    .plh-section { margin-top: 28px; }
+
+    .plh-hero { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; background: linear-gradient(135deg, #0f2747 0%, #182f56 55%, #1b365f 100%); border-radius: 28px; padding: clamp(30px, 4vw, 54px); position: relative; overflow: hidden; }
+    .plh-hero-copy {
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #f2dfb2;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .plh-hero h1,
+    .plh-title,
+    .cta-title,
+.plh-hero h1 { font-size: clamp(3rem, 5vw, 5rem); }
+    .plh-hero p {
+      margin: 20px 0 0;
+      max-width: 590px;
+      color: rgba(255,255,255,0.82);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+    .plh-hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .btn-primary,
+    .btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: rgba(37, 56, 89, 0.96); color: #ffffff; border: 1px solid rgba(255,255,255,0.72); box-shadow: none; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #d3ad62; color: #13294b; border: 1px solid #d3ad62; box-shadow: none; }
+    .btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: rgba(37, 56, 89, 0.96); color: #ffffff; border: 1px solid rgba(255,255,255,0.72); box-shadow: none; }
+    .plh-hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .plh-hero-points span {
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.84);
+      font-size: 0.92rem;
+    }
+    .plh-hero-media {
+      position: relative;
+      min-height: 100%;
+      background: #0d1f39;
+    }
+    .plh-hero-media img { width: 100%; height: 100%; object-fit: cover; }
+    .plh-hero-badge {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      max-width: 250px;
+      padding: 18px 18px 16px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.94);
+      color: var(--zen-ink);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.2);
+    }
+    .plh-hero-badge strong {
+      display: block;
+      font-size: 0.86rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--zen-navy);
+    }
+    .plh-hero-badge span {
+      display: block;
+      margin-top: 10px;
+      color: var(--zen-muted);
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    .plh-grid-4,
+    .plh-grid-3,
+    .plh-gallery,
+    .plh-cards,
+    .footer-grid { display: grid; gap: 18px; }
+    .plh-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .plh-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .plh-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .plh-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footer-grid { grid-template-columns: 1.2fr 0.8fr 0.8fr; }
+
+    .stat-card,
+    .panel,
+    .service-card,
+    .gallery-card,
+    .phrase-card,
+    .process-card,
+    .cta-shell,
+.stat-card,
+    .process-card,
+    .phrase-card,
+    .service-card,
+    .panel,
+    .cta-shell { padding: 26px; }
+    .stat-card strong,
+    .service-card strong,
+    .process-card strong,
+    .phrase-card strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--zen-navy);
+    }
+    .stat-card span,
+    .service-card p,
+    .process-card p,
+    .phrase-card p,
+    .panel p,
+    .cta-shell p,
+.stat-card span { display: block; margin-top: 10px; font-size: 0.95rem; }
+
+    .plh-title {
+      font-size: clamp(2.25rem, 4vw, 3.4rem);
+      color: var(--zen-navy);
+    }
+    .plh-intro {
+      margin: 12px 0 0;
+      max-width: 760px;
+      color: var(--zen-muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .owner-panel {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 0;
+      overflow: hidden;
+    }
+    .owner-copy {
+      padding: 34px;
+      background: linear-gradient(180deg, #fff 0%, #fbf8f2 100%);
+    }
+    .owner-copy h2 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      color: var(--zen-navy);
+      line-height: 1.02;
+    }
+    .owner-copy p { margin: 16px 0 0; }
+    .owner-notes { display: grid; gap: 14px; margin-top: 22px; }
+    .owner-note {
+      padding: 18px 18px;
+      border-radius: 22px;
+      background: rgba(185,147,69,0.09);
+      border: 1px solid rgba(185,147,69,0.18);
+    }
+    .owner-note strong { display: block; color: var(--zen-navy); margin-bottom: 6px; }
+    .owner-media img { width: 100%; height: 100%; object-fit: cover; }
+
+    .service-card { border: 1px solid rgba(211, 173, 98, 0.9); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%); box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08); }
+    .service-card .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--zen-gold-soft);
+      color: var(--zen-navy);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .service-card ul { margin: 0; padding-left: 18px; color: var(--zen-muted); line-height: 1.7; }
+
+    .process-step {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--zen-navy);
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .gallery-band {
+      background: linear-gradient(135deg, var(--zen-navy), var(--zen-navy-deep));
+      color: #fff;
+      border-radius: 34px;
+      padding: 30px;
+      box-shadow: var(--zen-shadow);
+    }
+    .gallery-band .plh-title { color: #fff; }
+    .gallery-band .plh-intro { color: rgba(255,255,255,0.72); }
+    .gallery-card {
+      overflow: hidden;
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.08);
+      box-shadow: none;
+    }
+    .gallery-card img { aspect-ratio: 0.95 / 1; width: 100%; object-fit: cover; }
+    .gallery-card div { padding: 16px; }
+    .gallery-card strong { display: block; color: #fff; margin-bottom: 6px; }
+    .gallery-card span { color: rgba(255,255,255,0.72); font-size: 0.92rem; line-height: 1.6; }
+
+    .phrase-card { border: 1px solid rgba(211, 173, 98, 0.9); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%); box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08); }
+
+    .cta-shell {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      background: linear-gradient(135deg, #fff 0%, #faf4ea 100%);
+    }
+    .cta-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--zen-navy);
+    }
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+.footer-bottom {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+    }
+
+    .quote-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 16, 31, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0;
+      z-index: 60;
+    }
+.modal-close {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(16,35,63,0.08);
+      color: var(--zen-navy);
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .quote-form { display: grid; gap: 14px; margin-top: 22px; }
+    .quote-form label {
+      display: grid;
+      gap: 8px;
+      color: var(--zen-navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .quote-form input,
+    .quote-form textarea {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(16,35,63,0.14);
+      padding: 14px 16px;
+      font: inherit;
+      color: var(--zen-ink);
+      background: #fff;
+    }
+    .quote-form textarea { min-height: 140px; resize: vertical; }
+
+    @media (max-width: 1080px) {
+      .plh-hero,
+      .owner-panel,
+      .cta-shell,
+      .footer-grid { grid-template-columns: 1fr; }
+      .plh-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+      .plh-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .plh-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cta-actions { justify-content: flex-start; }
+      .plh-hero-media { min-height: 340px; }
+    }
+    @media (max-width: 720px) {
+      .plh-shell { width: min(var(--zen-max), calc(100% - 20px)); padding: 22px 0 64px; }
+      .topbar-inner, .nav-inner { width: min(var(--zen-max), calc(100% - 20px)); }
+      .plh-grid-4,
+      .plh-grid-3,
+      .plh-gallery,
+      .plh-cards { grid-template-columns: 1fr; }
+      .plh-hero-copy,
+      .owner-copy,
+      .stat-card,
+      .service-card,
+      .process-card,
+      .phrase-card,
+      .cta-shell,
+.plh-hero-points { grid-template-columns: 1fr; }
+      .plh-hero-badge {
+        position: static;
+        margin: 18px;
+        max-width: none;
+      }
+}
+  
+.plh-kpi-grid, .plh-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.stat-card, .service-card, .process-card, .phrase-card { border: 1px solid rgba(211, 173, 98, 0.9); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%); box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08); }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #d3ad62; color: #13294b; border: 1px solid #d3ad62; box-shadow: none; }
+.btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: rgba(37, 56, 89, 0.96); color: #ffffff; border: 1px solid rgba(255,255,255,0.72); box-shadow: none; }
+@media (max-width: 1100px) { .plh-kpi-grid, .plh-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+@media (max-width: 720px) { .plh-kpi-grid, .plh-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+
+</style>
+
+<style id="eh-final-plumbing-style">
+
+:root { --eh-gold:#d3ad62; --eh-blue:#2d466f; --eh-navy:#13294b; }
+.plh-hero, .hero { text-align:center; grid-template-columns:1fr !important; }
+.plh-hero h1, .plh-title, .cta-title {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+.plh-hero-actions, .hero-actions, .cta-row {
+  display:flex !important; flex-wrap:wrap; justify-content:center !important; gap:18px !important;
+}
+.btn-primary, .plh-hero .btn-primary, .cta-row .btn-primary {
+  background: var(--eh-gold) !important; color: var(--eh-navy) !important; border:1px solid var(--eh-gold) !important; border-radius:999px !important; box-shadow:none !important;
+}
+.btn-secondary, .plh-hero .btn-secondary, .cta-row .btn-secondary {
+  background: rgba(45,70,111,0.92) !important; color:#fff !important; border:1px solid rgba(255,255,255,0.72) !important; border-radius:999px !important; box-shadow:none !important;
+}
+.service-grid, .plh-service-grid, .benefits-grid, .trust-grid, .card-grid {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:18px !important;
+}
+.service-card, .benefit-card, .trust-card, .card-grid > * {
+  border:1px solid rgba(211,173,98,0.9) !important; border-radius:24px !important; background:rgba(255,255,255,0.05) !important; box-shadow:none !important;
+}
+.badge, .service-badge, .pill, .chip { background:var(--eh-gold) !important; color:var(--eh-navy) !important; border:1px solid var(--eh-gold) !important; border-radius:999px !important; }
+.plh-trust-bar {
+  padding-top: 10px;
+}
+.plh-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.plh-trust-item {
+  min-height: 164px;
+  padding: 26px 22px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 253, 250, 0.98) 0%, rgba(247, 243, 235, 0.98) 100%);
+  border: 1px solid rgba(200, 164, 106, 0.34);
+  box-shadow: 0 16px 34px rgba(17, 31, 47, 0.07);
+  text-align: center;
+}
+.plh-trust-item h3 {
+  margin: 0 0 10px;
+  color: #17304d;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.72rem;
+  line-height: 0.98;
+}
+.plh-trust-item p {
+  margin: 0;
+  color: #5d6c7c;
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+.plh-problems-hero {
+  background: linear-gradient(135deg, rgba(19,38,63,0.98) 0%, rgba(24,48,78,0.96) 100%);
+  color: #fff;
+  border-radius: 34px;
+  padding: clamp(34px, 5vw, 58px);
+  box-shadow: var(--zen-shadow);
+}
+.plh-problems-hero h1 {
+  margin: 0;
+  max-width: 980px;
+  color: #fff;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.7rem, 4.7vw, 4.8rem);
+  line-height: 0.94;
+}
+.plh-problems-hero p.lead {
+  margin: 18px 0 0;
+  max-width: 880px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+.plh-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+.plh-problem-pill {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(212,178,123,0.26);
+  color: rgba(255,255,255,0.92);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.plh-problem-note {
+  margin-top: 30px;
+  color: #f6ead0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.02;
+}
+.plh-phone-banner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 18px 30px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d4b27b 0%, #b58b4f 100%);
+  color: #13263f;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.06rem;
+  box-shadow: 0 16px 30px rgba(181, 139, 79, 0.24);
+}
+@media (max-width:980px){ .service-grid, .plh-service-grid, .benefits-grid, .trust-grid, .card-grid, .plh-trust-grid { grid-template-columns:1fr !important; } }
+@media (max-width:980px){ .plh-problem-grid { grid-template-columns:1fr !important; } }
+
+</style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand-panel">
+          <a class="brand-lockup" href="index.html" aria-label="Zen Plumbing & Heating home">
+            <img src="assets/zen-logo-horizontal.svg" alt="Zen Plumbing & Heating" />
+          </a>
+        </div>
+        <div class="header-microcopy" aria-label="Service area">
+          <p class="header-microcopy-text">Gravesend, Northfleet and the surrounding Kent towns</p>
+        </div>
+        <div class="header-actions">
+          <a class="phone-chip" href="tel:+447713832252" aria-label="Call Zen Plumbing and Heating">
+            <span class="phone-chip-icon">☎</span>
+            <span class="phone-chip-number">+44 7713 832252</span>
+          </a>
+          <a class="callback-btn cta-gold" href="#quote-request" data-open-quote-modal data-cta-label="Request a Callback">Request a Callback</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Primary">
+      <div class="container nav-links">
+        <a href="complete-renovations.html">House and Apartment Renovations</a>
+        <a href="plumbing-heating.html">Plumbing &amp; Heating</a>
+        <a href="gas-safe.html">Gas Safe</a>
+        <a href="bathrooms.html">Bathrooms</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="projects.html">Our Projects</a>
+        
+      </div>
+    </nav>
+
+    <main class="plh-shell">
+      <section class="plh-section">
+        <div class="container plh-problems-hero">
+          <h1>Whatever plumbing or heating challenge you encounter, we&rsquo;ll take care of it for you.</h1>
+          <p class="lead">Let us handle the problem so you can get back to enjoying a comfortable, worry-free home.</p>
+          <div class="plh-problem-grid">
+            <article class="plh-problem-pill">Burst or leaking pipe &ndash; water flooding the kitchen, bathroom, or basement?</article>
+            <article class="plh-problem-pill">No hot water from taps or shower &ndash; boiler working but water stays cold?</article>
+            <article class="plh-problem-pill">Blocked drain or sink &ndash; standing water that won&rsquo;t drain away?</article>
+            <article class="plh-problem-pill">Radiators that stay cold at the top or bottom &ndash; uneven heating throughout the house?</article>
+            <article class="plh-problem-pill">Low water pressure &ndash; weak flow from taps, shower, or filling toilet slowly?</article>
+            <article class="plh-problem-pill">Dripping tap or shower head &ndash; wasting water and driving up bills?</article>
+            <article class="plh-problem-pill">Toilet that keeps running or won&rsquo;t flush properly &ndash; constant water noise and high usage?</article>
+            <article class="plh-problem-pill">Boiler pressure too low or too high &ndash; system locks out or heating fails?</article>
+            <article class="plh-problem-pill">No heating at all &ndash; boiler working but radiators ice cold, especially in winter?</article>
+            <article class="plh-problem-pill">Annual boiler service overdue &ndash; risk of breakdown, invalid warranty, or unsafe operation?</article>
+          </div>
+          <div class="plh-problem-note">We fix it all: leaks, blockages, heating issues, and more. Count on us for every plumbing and heating need.</div>
+          <a class="plh-phone-banner" href="tel:+447713832252">☎ +44 7713 832252 &mdash; Call to discuss your problem</a>
+        </div>
+      </section>
+
+      <section class="plh-section plh-trust-bar">
+      <div class="container plh-trust-grid">
+        <article class="plh-trust-item">
+          <h3>Repair work done properly</h3>
+          <p>We focus on dependable fixes, not rushed temporary workarounds.</p>
+        </article>
+        <article class="plh-trust-item">
+          <h3>Landlord-ready maintenance</h3>
+          <p>Responsive visits and clear updates for occupied and turnaround properties.</p>
+        </article>
+        <article class="plh-trust-item">
+          <h3>Owner-led attendance</h3>
+          <p>Direct advice, honest scope and fewer delays between diagnosis and action.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="plh-section cta-shell">
+      <div>
+        <h2 class="cta-title">Need help with plumbing or heating in Kent?</h2>
+        <p>
+          Send over the issue, your postcode and whether it is urgent. We will guide the next step and prepare the right callback quickly.
+        </p>
+      </div>
+      <div class="cta-actions">
+                <button class="btn-primary" type="button" data-open-quote-modal data-cta-label="GET FREE QUOTE">GET FREE QUOTE</button>
+        <a class="btn-secondary" href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs." style="color: var(--zen-navy); background: rgba(16,35,63,0.06); border-color: rgba(16,35,63,0.12);">SPEAK WITH OWNER</a>
+      </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container footer-panel footer-panel-home">
+      <div class="footer-brand footer-brand-home">
+        <img src="assets/zen-logo-reverse.png" alt="Zen Plumbing &amp; Heating logo" />
+        <p class="footer-brand-tagline">Your local expert for plumbing, heating, and renovations across Kent.</p>
+      </div>
+    <div class="footer-actions footer-actions-home">
+      <a class="footer-pill footer-pill-light" href="faq.html">FAQ page</a>
+      <a class="footer-pill footer-pill-light" href="area-we-cover.html">Area We Cover</a>
+      <div class="footer-contact-stack">
+        <a class="footer-phone footer-phone-home footer-phone-gold" href="tel:+447713832252">Call today <strong>+44 7713 832252</strong></a>
+        <a class="footer-whatsapp-home" href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs.">WhatsApp Me</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="quote-modal" id="quote-request" hidden aria-hidden="true">
+  <div class="quote-modal-backdrop" data-close-quote-modal></div>
+  <div class="quote-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+    <button class="quote-modal-close" type="button" aria-label="Close request form" data-close-quote-modal>×</button>
+    <div class="quote-modal-copy">
+      <p class="quote-modal-kicker">Quick request</p>
+      <h2 id="quote-modal-title">Tell us what you need</h2>
+      <p>Fill in the details below and we will send your enquiry to our team.</p>
+    </div>
+    <form class="quote-modal-form" id="quote-modal-form" action="https://formsubmit.co/thaqi_100@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Enquiry" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="ctaSource" id="quote-cta-source" value="Website enquiry" />
+
+      <label class="quote-field">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+
+      <label class="quote-field">
+        <span>Phone</span>
+        <input type="tel" name="phone" autocomplete="tel" required />
+      </label>
+
+      <label class="quote-field">
+        <span>What are you interested in?</span>
+        <textarea name="interest" rows="5" required placeholder="Let us know the service you need, your postcode, if it's urgent, and any key measurements."></textarea>
+      </label>
+
+      <button class="quote-submit" type="submit">Send</button>
+      <p class="quote-modal-note" id="quote-modal-note">When you press Send, your enquiry is sent to our team and we will get back to you as soon as possible.</p>
+    </form>
+  </div>
+</div>
+  </div>
+  <script>
+    (function () {
+      const modal = document.getElementById('quote-request');
+      const form = document.getElementById('quote-modal-form');
+      const ctaSource = document.getElementById('quote-cta-source');
+      const triggers = document.querySelectorAll('[data-open-quote-modal]');
+      const closeButtons = document.querySelectorAll('[data-close-quote-modal]');
+
+      if (!modal || !form || !ctaSource || !triggers.length) {
+        return;
+      }
+
+      const openModal = function (sourceLabel) {
+        ctaSource.value = sourceLabel || 'Website enquiry';
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('quote-modal-open');
+        const firstInput = form.querySelector('input[name="name"]');
+        if (firstInput) {
+          window.setTimeout(function () { firstInput.focus(); }, 60);
+        }
+      };
+
+      const closeModal = function () {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('quote-modal-open');
+      };
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          openModal(trigger.getAttribute('data-cta-label'));
+        });
+      });
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener('click', closeModal);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modal.hidden) {
+          closeModal();
+        }
+      });
+
+      
+    }());
+  </script>
+</body>
+</html>

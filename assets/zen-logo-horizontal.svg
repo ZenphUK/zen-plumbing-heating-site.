@@ -1,0 +1,14 @@
+<svg width="1450" height="290" viewBox="0 0 1450 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1450" height="290" fill="none"/>
+  <g transform="translate(50 28)">
+    <path d="M70 6H138C149.046 6 158 14.9543 158 26V84C158 119.126 137.077 151.882 104 174C70.9233 151.882 50 119.126 50 84V26C50 14.9543 58.9543 6 70 6Z" fill="#162538"/>
+    <path d="M78 16H130C135.523 16 140 20.4772 140 26V79C140 108.143 122.637 135.799 104 150C85.3627 135.799 68 108.143 68 79V26C68 20.4772 72.4772 16 78 16Z" stroke="#A8844E" stroke-width="4"/>
+    <rect x="87" y="52" width="35" height="8" fill="#F5F1E8"/>
+    <polygon points="116,60 124,60 93,95 85,95" fill="#F5F1E8"/>
+    <rect x="85" y="95" width="37" height="9" fill="#F5F1E8"/>
+  </g>
+  <g transform="translate(250 72)">
+    <text x="0" y="56" fill="#162538" font-family="Georgia, 'Times New Roman', serif" font-size="60" letter-spacing="-1.1">Zen Plumbing &amp; Heating</text>
+    <rect x="3" y="82" width="600" height="2" rx="1" fill="#A8844E" opacity="0.6"/>
+  </g>
+</svg>

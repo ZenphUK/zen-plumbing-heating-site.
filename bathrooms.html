@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bathrooms | Zen Plumbing &amp; Heating</title>
+  <meta name="description" content="Bathroom and toilet renovations across Gravesend, Dartford and the surrounding Kent towns from Zen Plumbing & Heating." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="homepage-v2.css" />
+  <link rel="stylesheet" href="homepage-v3-overrides.css" />
+  <style>
+    :root {
+      --zen-navy: #10233f;
+      --zen-navy-deep: #0a1830;
+      --zen-gold: #b99345;
+      --zen-gold-soft: rgba(185, 147, 69, 0.16);
+      --zen-ink: #223247;
+      --zen-muted: #617082;
+      --zen-cream: #f5f0e7;
+      --zen-panel: #ffffff;
+      --zen-line: rgba(16, 35, 63, 0.12);
+      --zen-shadow: 0 22px 48px rgba(16, 35, 63, 0.12);
+      --zen-radius: 26px;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f7f3eb 0%, #f3efe7 100%);
+      color: var(--zen-ink);
+    }
+
+    .bath-page {
+      padding-bottom: 3.5rem;
+    }
+
+    .bath-page .container {
+      max-width: 1180px;
+    }
+
+    .bath-section {
+      padding: 1.15rem 0;
+    }
+
+    .bath-hero {
+      padding: 2rem 0 1.2rem;
+    }
+
+    .bath-hero-shell,
+    .bath-owner-shell,
+    .bath-cta-shell {
+      background: var(--zen-panel);
+      border: 1px solid var(--zen-line);
+      border-radius: var(--zen-radius);
+      box-shadow: var(--zen-shadow);
+      overflow: hidden;
+    }
+
+    .bath-hero-shell {
+      position: relative;
+      padding: 5.2rem 2rem;
+      background: linear-gradient(135deg, rgba(10, 24, 48, 0.82), rgba(16, 35, 63, 0.74)), url("assets/bathrooms-hero.jpg") center/cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    .bath-hero-shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(185, 147, 69, 0.24), transparent 30%);
+      pointer-events: none;
+    }
+
+    .bath-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .bath-kicker {
+      margin: 0 0 0.9rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--zen-gold);
+      font-weight: 800;
+    }
+
+    .bath-hero h1,
+    .bath-heading h2,
+    .bath-owner-copy h2,
+    .bath-cta-shell h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: 1.08;
+      color: var(--zen-navy);
+    }
+
+    .bath-hero h1 {
+      color: #fff;
+      font-size: clamp(2.35rem, 4.6vw, 4.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .bath-hero-subtitle,
+    .bath-heading p,
+    .bath-owner-copy p,
+    .bath-card p,
+    .bath-step p,
+    .bath-caption,
+    .bath-phrase-card p,
+    .bath-cta-shell p {
+      margin: 0;
+      line-height: 1.72;
+      color: var(--zen-muted);
+    }
+
+    .bath-hero-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.16rem;
+      max-width: 720px;
+      margin: 0 auto 1.8rem;
+    }
+
+    .bath-button,
+    .bath-button-secondary,
+    .bath-gallery-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .bath-button,
+    .bath-gallery-link {
+      background: var(--zen-gold);
+      color: #fff;
+      box-shadow: 0 16px 28px rgba(185, 147, 69, 0.28);
+    }
+
+    .bath-button { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #d3ad62; color: #13294b; border: 1px solid #d3ad62; box-shadow: none; }
+
+    .bath-button-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: rgba(37, 56, 89, 0.96); color: #ffffff; border: 1px solid rgba(255,255,255,0.72); box-shadow: none; }
+
+    .bath-button:hover,
+    .bath-button-secondary:hover,
+    .bath-gallery-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .bath-trust-grid,
+    .bath-services-grid,
+    .bath-process-grid,
+    .bath-gallery-grid,
+    .bath-phrases-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .bath-trust-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+
+    .bath-trust-card,
+    .bath-card,
+    .bath-step,
+    .bath-phrase-card {
+      background: var(--zen-panel);
+      border: 1px solid var(--zen-line);
+      border-radius: 24px;
+      box-shadow: var(--zen-shadow);
+      padding: 1.65rem;
+    }
+
+    .bath-trust-card strong,
+    .bath-card h3,
+    .bath-step h4,
+    .bath-gallery-overlay strong {
+      display: block;
+      color: var(--zen-navy);
+      margin-bottom: 0.55rem;
+    }
+
+    .bath-owner-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+      gap: 0;
+    }
+
+    .bath-owner-copy {
+      padding: 2.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .bath-owner-copy h2,
+    .bath-heading h2,
+    .bath-cta-shell h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .bath-signoff {
+      color: var(--zen-navy);
+      font-weight: 800;
+    }
+
+    .bath-owner-image img,
+    .bath-gallery-item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bath-services-section {
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .bath-heading {
+      max-width: 760px;
+      margin: 0 auto 1.35rem;
+      text-align: center;
+    }
+
+    .bath-services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .bath-card .highlight {
+      display: block;
+      margin-top: 1rem;
+      color: #cf4e68;
+      font-weight: 800;
+    }
+
+    .bath-process-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+
+    .bath-step {
+      text-align: center;
+    }
+
+    .bath-step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      background: var(--zen-gold);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 14px 24px rgba(185, 147, 69, 0.22);
+    }
+
+    .bath-gallery-band {
+      background: linear-gradient(180deg, var(--zen-navy) 0%, var(--zen-navy-deep) 100%);
+      color: #fff;
+      border-radius: var(--zen-radius);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: var(--zen-shadow);
+      padding: 2.3rem 1.35rem;
+    }
+
+    .bath-gallery-band .bath-heading h2,
+    .bath-gallery-band .bath-heading p,
+    .bath-gallery-overlay {
+      color: #fff;
+    }
+
+    .bath-gallery-band .bath-heading p {
+      opacity: 0.82;
+    }
+
+    .bath-gallery-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 1.1rem;
+    }
+
+    .bath-gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      min-height: 255px;
+      background: #09152a;
+    }
+
+    .bath-gallery-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 2.2rem 1.1rem 1rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(7, 16, 32, 0.84) 100%);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .bath-phrases-section {
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .bath-phrases-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .bath-phrase-card {
+      border-left: 5px solid var(--zen-gold);
+      padding-left: 1.4rem;
+    }
+
+    .bath-phrase-card p {
+      color: var(--zen-navy);
+      font-size: 1.06rem;
+      font-weight: 600;
+    }
+
+    .bath-cta-shell {
+      padding: 2.7rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(16, 35, 63, 0.06), rgba(185, 147, 69, 0.1));
+    }
+
+    .bath-cta-shell p {
+      max-width: 760px;
+      margin: 0.85rem auto 0;
+    }
+
+    .bath-cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-top: 1.55rem;
+    }
+
+    @media (max-width: 1080px) {
+      .bath-trust-grid,
+      .bath-services-grid,
+      .bath-process-grid,
+      .bath-gallery-grid,
+      .bath-phrases-grid,
+      .bath-owner-shell {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .bath-owner-image {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .bath-hero-shell,
+      .bath-owner-copy,
+      .bath-cta-shell {
+        padding: 1.7rem;
+      }
+
+      .bath-trust-grid,
+      .bath-services-grid,
+      .bath-process-grid,
+      .bath-gallery-grid,
+      .bath-phrases-grid,
+      .bath-owner-shell,
+      .bath-cta-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .bath-gallery-item {
+        min-height: 230px;
+      }
+
+      .bath-cta-actions {
+        display: grid;
+      }
+    }
+  
+.bath-trust-grid, .bath-service-grid, .bath-process-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.bath-trust-card, .bath-service-card, .bath-process-card { border: 1px solid rgba(211, 173, 98, 0.9); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%); box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08); }
+.bath-button { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: #d3ad62; color: #13294b; border: 1px solid #d3ad62; box-shadow: none; }
+.bath-button-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 18px 30px; border-radius: 999px; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.02em; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; background: rgba(37, 56, 89, 0.96); color: #ffffff; border: 1px solid rgba(255,255,255,0.72); box-shadow: none; }
+@media (max-width: 1100px) { .bath-trust-grid, .bath-service-grid, .bath-process-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+@media (max-width: 720px) { .bath-trust-grid, .bath-service-grid, .bath-process-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+
+</style>
+
+<style id="eh-final-bathrooms-style">
+
+:root { --eh-gold:#d3ad62; --eh-blue:#2d466f; --eh-navy:#13294b; }
+.hero, .page-hero, .gas-hero, .bath-hero, .ext-hero { text-align:center; }
+.hero-actions, .cta-row, .gas-actions, .bath-actions, .ext-actions {
+  display:flex !important; flex-wrap:wrap; justify-content:center !important; gap:18px !important;
+}
+.btn-primary, .hero .btn-primary, .cta-row .btn-primary {
+  background: var(--eh-gold) !important; color: var(--eh-navy) !important; border:1px solid var(--eh-gold) !important; border-radius:999px !important; box-shadow:none !important;
+}
+.btn-secondary, .hero .btn-secondary, .cta-row .btn-secondary {
+  background: rgba(45,70,111,0.92) !important; color:#fff !important; border:1px solid rgba(255,255,255,0.72) !important; border-radius:999px !important; box-shadow:none !important;
+}
+.gas-service-grid, .bath-trust-grid, .ext-trust-grid, .service-grid, .trust-grid, .benefits-grid, .card-grid {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:18px !important;
+}
+.gas-service-card, .bath-trust-card, .ext-trust-card, .service-card, .trust-card, .benefit-card, .card-grid > * {
+  border:1px solid rgba(211,173,98,0.9) !important; border-radius:24px !important; background:rgba(255,255,255,0.05) !important; box-shadow:none !important;
+}
+.badge, .service-badge, .pill, .chip { background:var(--eh-gold) !important; color:var(--eh-navy) !important; border:1px solid var(--eh-gold) !important; border-radius:999px !important; }
+@media (max-width:980px){ .gas-service-grid, .bath-trust-grid, .ext-trust-grid, .service-grid, .trust-grid, .benefits-grid, .card-grid { grid-template-columns:1fr !important; } }
+.bath-intro-hero {
+  background: linear-gradient(135deg, rgba(19,38,63,0.98) 0%, rgba(24,48,78,0.96) 100%);
+  color: #fff;
+  border-radius: 34px;
+  padding: clamp(34px, 5vw, 58px);
+  box-shadow: var(--zen-shadow);
+}
+.bath-intro-hero h1 {
+  margin: 0;
+  max-width: 860px;
+  color: #fff;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 4.9vw, 4.9rem);
+  line-height: 0.94;
+}
+.bath-intro-hero p {
+  margin: 18px 0 0;
+  max-width: 760px;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.08rem;
+  line-height: 1.72;
+}
+.bath-intro-list {
+  display: grid;
+  gap: 12px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.bath-intro-list li {
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(212,178,123,0.24);
+  color: rgba(255,255,255,0.94);
+  font-size: 1rem;
+}
+.bath-intro-hero .bath-intro-cta {
+  margin-top: 26px;
+  color: #f6ead0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.02;
+}
+.bath-offer-block {
+  margin-top: 28px;
+  padding: 24px 26px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(19,41,75,0.08);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.06);
+}
+.bath-offer-block h3 {
+  margin: 0 0 16px;
+  color: var(--zen-navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1;
+}
+.bath-offer-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 10px;
+  color: var(--zen-muted);
+  line-height: 1.75;
+}
+.bath-offer-block li::marker {
+  color: var(--zen-gold);
+}
+.bath-offer-note {
+  margin-top: 18px;
+  color: var(--zen-muted);
+  line-height: 1.8;
+}
+.bath-service-cards-section {
+  padding-top: 0.4rem;
+}
+.bath-service-cards-heading {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+.bath-service-cards-heading h2 {
+  margin: 0;
+  color: var(--zen-navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  line-height: 0.96;
+}
+.bath-service-cards-heading p {
+  margin: 14px auto 0;
+  max-width: 700px;
+  color: var(--zen-muted);
+  line-height: 1.7;
+}
+.bath-service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.bath-service-card {
+  padding: 30px 28px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,246,239,0.98) 100%);
+  border: 1px solid rgba(200, 164, 106, 0.18);
+  box-shadow: 0 20px 44px rgba(17, 31, 47, 0.08);
+}
+.bath-service-card h3 {
+  margin: 0 0 18px;
+  color: #1b2440;
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+.bath-service-card p {
+  margin: 0;
+  color: #5c6876;
+  font-size: 1rem;
+  line-height: 1.78;
+}
+.bath-service-card .bath-service-tag {
+  display: block;
+  margin-top: 18px;
+  color: #cf4e68;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.bath-service-cards-grid + .bath-service-cards-grid {
+  margin-top: 28px;
+}
+
+@media (max-width: 980px) {
+  .bath-service-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .bath-service-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand-panel">
+          <a class="brand-lockup" href="index.html" aria-label="Zen Plumbing & Heating home">
+            <img src="assets/zen-logo-horizontal.svg" alt="Zen Plumbing & Heating" />
+          </a>
+        </div>
+        <div class="header-microcopy" aria-label="Service area">
+          <p class="header-microcopy-text">Gravesend, Northfleet and the surrounding Kent towns</p>
+        </div>
+        <div class="header-actions">
+          <a class="phone-chip" href="tel:+447713832252" aria-label="Call Zen Plumbing and Heating">
+            <span class="phone-chip-icon">☎</span>
+            <span class="phone-chip-number">+44 7713 832252</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Primary">
+      <div class="container nav-links">
+        <a href="complete-renovations.html">House and Apartment Renovations</a>
+        <a href="plumbing-heating.html">Plumbing &amp; Heating</a>
+        <a href="gas-safe.html">Gas Safe</a>
+        <a href="bathrooms.html">Bathrooms</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="projects.html">Our Projects</a>
+        
+      </div>
+    </nav>
+
+<main class="bath-page">
+    <section class="bath-section">
+      <div class="container bath-intro-hero">
+        <h1>Bathrooms and toilets designed, coordinated and finished with care</h1>
+        <p>Zen Plumbing &amp; Heating combines plumbing know-how with a trusted team of tilers, electricians and builders to deliver bathrooms that feel more considered and more complete.</p>
+        <p>Bathroom refits, cloakrooms, layout changes, upgraded finishes and plumbing-led design improvements.</p>
+        <ul class="bath-intro-list">
+          <li>End-to-end bathroom renovation management</li>
+          <li>Plumbing-led design thinking for smarter layouts</li>
+          <li>Trusted finishing trades coordinated by one team</li>
+          <li>Practical, durable upgrades for homes and apartments</li>
+        </ul>
+        <div class="bath-intro-cta">We&rsquo;re the go‑to experts for bathroom and toilet renovations in homes and apartments.</div>
+        <p>Whether you need a complete overhaul or a few key upgrades, our team brings precision, style, and reliability to every project.</p>
+      </div>
+    </section>
+
+    <section class="bath-section bath-phrases-section">
+      <div class="container">
+        <div class="bath-heading">
+          <p class="bath-kicker">Why clients choose Zen</p>
+          <h2>Why Choose Us?</h2>
+          <p>Bathrooms and toilets need more than attractive finishes — they need good planning, dependable trades and careful coordination from start to finish.</p>
+        </div>
+        <div class="bath-phrases-grid">
+          <article class="bath-phrase-card"><p><strong>End-to-end solutions.</strong> From demolition to the final touch, we manage every step so you don&rsquo;t have to.</p></article>
+          <article class="bath-phrase-card"><p><strong>Proven craftsmanship.</strong> Our skilled tradespeople have years of experience and a sharp eye for detail — no corners cut.</p></article>
+          <article class="bath-phrase-card"><p><strong>Tailored to your space.</strong> We work with your layout, not against it, maximizing functionality even in the smallest bathrooms.</p></article>
+          <article class="bath-phrase-card"><p><strong>Quality materials.</strong> We partner with trusted suppliers to ensure durability and style that lasts for years.</p></article>
+          <article class="bath-phrase-card"><p><strong>Transparent process.</strong> Clear timelines, upfront pricing, and regular updates so you always know what&rsquo;s happening.</p></article>
+          <article class="bath-phrase-card"><p><strong>Clean and considerate.</strong> We respect your home: we protect your floors and furniture, and we leave the site spotless when we&rsquo;re done.</p></article>
+        </div>
+        <div class="bath-offer-block">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>Full bathroom renovations: tubs, showers, vanities, flooring, and walls.</li>
+            <li>Toilet replacements and upgrades, including smart and eco-friendly options.</li>
+            <li>Water damage repair and prevention solutions.</li>
+            <li>Accessibility modifications for a safer, more comfortable space.</li>
+            <li>Modern design consultations to help you pick the perfect look.</li>
+          </ul>
+          <p class="bath-offer-note">We understand that renovating a bathroom can be disruptive, which is why we plan meticulously to minimize downtime. Our goal is to deliver a stunning, functional space with as little inconvenience to you as possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bath-section">
+      <div class="container">
+        <div class="bath-cta-shell">
+          <p class="bath-kicker">Ready when you are</p>
+          <h2>Ready to Love Your Bathroom Again?</h2>
+          <p>Book your free, no-obligation bathroom consultation. I'll visit your home, listen to your plans, and give you honest advice on design, layout, and budget — including a realistic timeline and fixed-price quote.</p>
+          <div class="bath-cta-actions">
+            <a class="bath-button" href="#quote-request" data-open-quote-modal data-cta-label="Book Your Free Bathroom Consultation">Book Your Free Bathroom Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bath-section bath-service-cards-section">
+      <div class="container">
+        <div class="bath-service-cards-heading">
+          <h2>Bathroom Services We Deliver</h2>
+          <p>Everything from a new toilet to a complete luxury bathroom — all carried out by skilled tradespeople.</p>
+        </div>
+        <div class="bath-service-cards-grid">
+          <article class="bath-service-card">
+            <h3>Full Bathroom Renovations</h3>
+            <p>Complete strip-out and rebuild of your bathroom — new suite, tiling, flooring, lighting, heating, and plumbing. We handle everything from design to the final silicone bead.</p>
+            <span class="bath-service-tag">Perfect for: Dated bathrooms, family upgrades, pre-sale prep</span>
+          </article>
+          <article class="bath-service-card">
+            <h3>Walk-In Showers &amp; Wet Rooms</h3>
+            <p>Modern, accessible, and stylish. We create walk-in showers and fully tanked wet rooms that look stunning and are practical for every member of the family.</p>
+            <span class="bath-service-tag">Perfect for: Accessibility, modern living, easy cleaning</span>
+          </article>
+          <article class="bath-service-card">
+            <h3>Toilet &amp; Cloakroom Updates</h3>
+            <p>Small room, big impact. New toilets, sinks, storage, and tiling for downstairs cloakrooms, en-suites, and compact bathrooms. We make the most of every inch.</p>
+            <span class="bath-service-tag">Perfect for: Compact spaces, quick updates, guest bathrooms</span>
+          </article>
+          <article class="bath-service-card">
+            <h3>Tiling &amp; Flooring</h3>
+            <p>Floor-to-ceiling tiling, feature walls, mosaic accents, and waterproof flooring. We prep surfaces properly, waterproof where needed, and finish with precision.</p>
+            <span class="bath-service-tag">Perfect for: Waterproofing, style updates, durable finishes</span>
+          </article>
+          <article class="bath-service-card">
+            <h3>Heating &amp; Ventilation</h3>
+            <p>Underfloor heating, heated towel rails, extractor fans, and proper ventilation. Warm, dry, comfortable bathrooms that stay mould-free and fresh.</p>
+            <span class="bath-service-tag">Perfect for: Cold bathrooms, damp issues, luxury feel</span>
+          </article>
+          <article class="bath-service-card">
+            <h3>Landlord Bathroom Refurbs</h3>
+            <p>Durable, cost-effective bathroom updates for rental properties. Modern, easy-to-clean, and tenant-friendly — completed fast so your property isn't off the market.</p>
+            <span class="bath-service-tag">Perfect for: Buy-to-let, HMOs, estate agents</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer">
+  <div class="container footer-panel footer-panel-home">
+    <div class="footer-brand footer-brand-home">
+      <img src="assets/zen-logo-reverse.png" alt="Zen Plumbing &amp; Heating logo" />
+      <p class="footer-brand-tagline">Your local expert for plumbing, heating, and renovations across Kent.</p>
+    </div>
+    <div class="footer-actions footer-actions-home">
+      <a class="footer-pill footer-pill-light" href="faq.html">FAQ page</a>
+      <a class="footer-pill footer-pill-light" href="area-we-cover.html">Area We Cover</a>
+      <div class="footer-contact-stack">
+        <a class="footer-phone footer-phone-home footer-phone-gold" href="tel:+447713832252">Call today <strong>+44 7713 832252</strong></a>
+        <a class="footer-whatsapp-home" href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs.">WhatsApp Me</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="quote-modal" id="quote-request" hidden aria-hidden="true">
+  <div class="quote-modal-backdrop" data-close-quote-modal></div>
+  <div class="quote-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+    <button class="quote-modal-close" type="button" aria-label="Close request form" data-close-quote-modal>×</button>
+    <div class="quote-modal-copy">
+      <p class="quote-modal-kicker">Quick request</p>
+      <h2 id="quote-modal-title">Tell us what you need</h2>
+      <p>Fill in the details below and we will send your enquiry to our team.</p>
+    </div>
+    <form class="quote-modal-form" id="quote-modal-form" action="https://formsubmit.co/thaqi_100@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Enquiry" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="ctaSource" id="quote-cta-source" value="Website enquiry" />
+
+      <label class="quote-field">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+
+      <label class="quote-field">
+        <span>Phone</span>
+        <input type="tel" name="phone" autocomplete="tel" required />
+      </label>
+
+      <label class="quote-field">
+        <span>What are you interested in?</span>
+        <textarea name="interest" rows="5" required placeholder="Let us know the service you need, your postcode, if it's urgent, and any key measurements."></textarea>
+      </label>
+
+      <button class="quote-submit" type="submit">Send</button>
+      <p class="quote-modal-note" id="quote-modal-note">When you press Send, your enquiry is sent to our team and we will get back to you as soon as possible.</p>
+    </form>
+  </div>
+</div>
+  </div>
+  <script>
+    (function () {
+      const modal = document.getElementById('quote-request');
+      const form = document.getElementById('quote-modal-form');
+      const ctaSource = document.getElementById('quote-cta-source');
+      const triggers = document.querySelectorAll('[data-open-quote-modal]');
+      const closeButtons = document.querySelectorAll('[data-close-quote-modal]');
+
+      if (!modal || !form || !ctaSource || !triggers.length) {
+        return;
+      }
+
+      const openModal = function (sourceLabel) {
+        ctaSource.value = sourceLabel || 'Website enquiry';
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('quote-modal-open');
+        const firstInput = form.querySelector('input[name="name"]');
+        if (firstInput) {
+          window.setTimeout(function () { firstInput.focus(); }, 60);
+        }
+      };
+
+      const closeModal = function () {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('quote-modal-open');
+      };
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          openModal(trigger.getAttribute('data-cta-label'));
+        });
+      });
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener('click', closeModal);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modal.hidden) {
+          closeModal();
+        }
+      });
+
+      
+    }());
+  </script>
+
+</body>
+</html>

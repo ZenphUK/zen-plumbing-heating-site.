@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Area We Cover | Zen Plumbing &amp; Heating</title>
+  <meta name="description" content="Zen Plumbing & Heating covers DA1-DA18 and surrounding areas including Dartford, Gravesend, Bexley, Greenhithe, Ebbsfleet, Meopham and Sidcup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="homepage-v2.css" />
+
+<link rel="stylesheet" href="homepage-v3-overrides.css" />
+<style>
+.zen-subpage-main { padding: 40px 0 84px; background: linear-gradient(180deg, #f7f2ea 0%, #fcfaf6 100%); }
+.zen-subpage-section { margin-top: 28px; }
+.zen-subpage-hero {
+  background: linear-gradient(135deg, rgba(19,38,63,0.98) 0%, rgba(24,48,78,0.96) 100%);
+  color: #fff;
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: var(--zen-shadow);
+}
+.zen-subpage-hero-inner { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr); gap: 24px; padding: clamp(34px, 5vw, 58px); align-items: center; }
+.zen-eyebrow { display:inline-flex; align-items:center; width:fit-content; padding:8px 14px; border-radius:999px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:#f2dfb2; font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:700; }
+.zen-subpage-hero h1 { margin:16px 0 0; color:#fff; font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(2.9rem, 5vw, 5rem); line-height:0.94; }
+.zen-subpage-hero p { margin:18px 0 0; max-width:720px; color:rgba(255,255,255,0.9); font-size:1.08rem; line-height:1.75; }
+.zen-hero-card { padding: 28px; border-radius: 28px; background: rgba(255,255,255,0.1); border: 1px solid rgba(212,178,123,0.26); }
+.zen-hero-card strong { display:block; color:#fff; font-family:"Cormorant Garamond", Georgia, serif; font-size:2rem; line-height:0.98; }
+.zen-hero-card p { margin:14px 0 0; font-size:0.98rem; line-height:1.7; }
+.zen-section-title { margin:0 auto 22px; max-width:920px; text-align:center; }
+.zen-section-title h2 { margin:0; color:#17304d; font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(2.5rem, 4vw, 4rem); line-height:0.94; }
+.zen-section-title p { margin:14px auto 0; max-width:760px; color:#5d6c7c; line-height:1.75; }
+.zen-coverage-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; }
+.zen-coverage-card { min-height:100%; padding:28px 26px; border-radius:24px; background:linear-gradient(180deg, rgba(255,253,250,0.98) 0%, rgba(247,243,235,0.98) 100%); border:1px solid rgba(200,164,106,0.34); box-shadow:0 16px 34px rgba(17,31,47,0.07); }
+.zen-coverage-card h3 { margin:0; color:#17304d; font-family:"Cormorant Garamond", Georgia, serif; font-size:2rem; line-height:0.98; }
+.zen-coverage-card p { margin:14px 0 0; color:#5d6c7c; line-height:1.72; }
+.zen-chip-grid { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.zen-chip { padding:12px 16px; border-radius:999px; background:rgba(212,178,123,0.14); border:1px solid rgba(200,164,106,0.28); color:#17304d; font-weight:700; }
+.zen-call-band { background: linear-gradient(180deg, rgba(255,253,250,0.98) 0%, rgba(247,243,235,0.98) 100%); border:1px solid rgba(200,164,106,0.34); border-radius:28px; padding:32px; text-align:center; box-shadow:0 16px 34px rgba(17,31,47,0.07); }
+.zen-call-band h2 { margin:0; color:#17304d; font-family:"Cormorant Garamond", Georgia, serif; font-size:clamp(2.4rem, 4vw, 3.8rem); line-height:0.96; }
+.zen-call-band p { margin:16px auto 0; max-width:820px; color:#5d6c7c; line-height:1.75; }
+.zen-call-actions { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:24px; }
+.zen-button-gold, .zen-button-white { display:inline-flex; align-items:center; justify-content:center; padding:16px 28px; border-radius:999px; text-decoration:none; font-weight:800; }
+.zen-button-gold { background:linear-gradient(180deg, #d4b27b 0%, #b58b4f 100%); color:#13263f; }
+.zen-button-white { background:#fff; color:#17304d; border:1px solid rgba(200,164,106,0.36); }
+@media (max-width: 980px) { .zen-subpage-hero-inner, .zen-coverage-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand-panel">
+          <a class="brand-lockup" href="index.html" aria-label="Zen Plumbing & Heating home">
+            <img src="assets/zen-logo-horizontal.svg" alt="Zen Plumbing & Heating" />
+          </a>
+        </div>
+        <div class="header-microcopy" aria-label="Service area">
+          <p class="header-microcopy-text">Gravesend, Northfleet and the surrounding Kent towns</p>
+        </div>
+        <div class="header-actions">
+          <a class="phone-chip" href="tel:+447713832252" aria-label="Call Zen Plumbing and Heating">
+            <span class="phone-chip-icon">☎</span>
+            <span class="phone-chip-number">+44 7713 832252</span>
+          </a>
+          <a class="callback-btn cta-gold" href="#quote-request" data-open-quote-modal data-cta-label="Request a Callback">Request a Callback</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Primary">
+      <div class="container nav-links">
+        <a href="complete-renovations.html">House and Apartment Renovations</a>
+        <a href="plumbing-heating.html">Plumbing &amp; Heating</a>
+        <a href="gas-safe.html">Gas Safe</a>
+        <a href="bathrooms.html">Bathrooms</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="projects.html">Our Projects</a>
+      </div>
+    </nav>
+
+<main class="zen-subpage-main">
+  <section class="container zen-subpage-hero">
+    <div class="zen-subpage-hero-inner">
+      <div>
+        <p class="zen-eyebrow">Area We Cover</p>
+        <h1>Trusted local coverage across Dartford, Gravesend, Bexley, and surrounding areas.</h1>
+        <p>We work across DA1-DA18 and nearby locations, supporting homeowners, landlords, and property contacts who want a dependable team for boilers, plumbing, heating, bathrooms, extensions, underfloor heating, and complete renovations.</p>
+      </div>
+      <div class="zen-hero-card">
+        <strong>Primary reach</strong>
+        <p>Dartford, Crayford, Darenth, Greenhithe, Ebbsfleet, Gravesend, Northfleet, Meopham, Sidcup, Bexley, Bexleyheath, Erith, Welling, and nearby areas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container zen-subpage-section">
+    <div class="zen-section-title">
+      <h2>We regularly support homes across the full DA1-DA18 range.</h2>
+      <p>If you are near these areas, it is worth contacting us even if your postcode sits just outside the main list.</p>
+    </div>
+    <div class="zen-coverage-grid">
+      <article class="zen-coverage-card"><h3>Main postcode range</h3><p>DA1, DA2, DA3, DA4, DA5, DA6, DA7, DA8, DA9, DA10, DA11, DA12, DA13, DA14, DA15, DA16, DA17 and DA18.</p></article>
+      <article class="zen-coverage-card"><h3>Typical towns and areas</h3><p>Dartford, Crayford, Bean, Longfield, Hartley, Bexley, Bexleyheath, Greenhithe, Swanscombe, Ebbsfleet, Gravesend, Northfleet, Shorne, Cobham, Meopham, Southfleet, Sidcup and surrounding locations.</p></article>
+      <article class="zen-coverage-card"><h3>Nearby locations</h3><p>If you are just outside the listed area, it is still worth getting in touch. We can confirm availability based on the type of work and location.</p></article>
+    </div>
+    <div class="zen-chip-grid">
+      <span class="zen-chip">Dartford</span>
+      <span class="zen-chip">Gravesend</span>
+      <span class="zen-chip">Northfleet</span>
+      <span class="zen-chip">Greenhithe</span>
+      <span class="zen-chip">Ebbsfleet</span>
+      <span class="zen-chip">Meopham</span>
+      <span class="zen-chip">Sidcup</span>
+      <span class="zen-chip">Bexley</span>
+      <span class="zen-chip">Bexleyheath</span>
+      <span class="zen-chip">DA1-DA18</span>
+    </div>
+  </section>
+
+  <section class="container zen-subpage-section">
+    <div class="zen-call-band">
+      <h2>Not sure if you are within our area?</h2>
+      <p>Send your postcode and the type of work needed, and we will confirm quickly.</p>
+      <div class="zen-call-actions">
+        <a class="zen-button-gold" href="#quote-request" data-open-quote-modal data-cta-label="Request a Callback">Request a Callback</a>
+        <a class="zen-button-white" href="tel:+447713832252">Call Now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-panel footer-panel-home">
+    <div class="footer-brand footer-brand-home">
+      <img src="assets/zen-logo-reverse.png" alt="Zen Plumbing &amp; Heating logo" />
+      <p class="footer-brand-tagline">Your local expert for plumbing, heating, and renovations across Kent.</p>
+    </div>
+    <div class="footer-actions footer-actions-home">
+      <a class="footer-pill footer-pill-light" href="faq.html">FAQ page</a>
+      <a class="footer-pill footer-pill-light" href="area-we-cover.html">Area We Cover</a>
+      <div class="footer-contact-stack">
+        <a class="footer-phone footer-phone-home footer-phone-gold" href="tel:+447713832252">Call today <strong>+44 7713 832252</strong></a>
+        <a class="footer-whatsapp-home" href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs.">WhatsApp Me</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="quote-modal" id="quote-request" hidden aria-hidden="true">
+  <div class="quote-modal-backdrop" data-close-quote-modal></div>
+  <div class="quote-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+    <button class="quote-modal-close" type="button" aria-label="Close request form" data-close-quote-modal>×</button>
+    <div class="quote-modal-copy">
+      <p class="quote-modal-kicker">Quick request</p>
+      <h2 id="quote-modal-title">Tell us what you need</h2>
+      <p>Fill in the details below and we will send your enquiry to our team.</p>
+    </div>
+    <form class="quote-modal-form" id="quote-modal-form" action="https://formsubmit.co/thaqi_100@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Enquiry" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="ctaSource" id="quote-cta-source" value="Website enquiry" />
+
+      <label class="quote-field">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+
+      <label class="quote-field">
+        <span>Phone</span>
+        <input type="tel" name="phone" autocomplete="tel" required />
+      </label>
+
+      <label class="quote-field">
+        <span>What are you interested in?</span>
+        <textarea name="interest" rows="5" required placeholder="Let us know the service you need, your postcode, if it's urgent, and any key measurements."></textarea>
+      </label>
+
+      <button class="quote-submit" type="submit">Send</button>
+      <p class="quote-modal-note" id="quote-modal-note">When you press Send, your enquiry is sent to our team and we will get back to you as soon as possible.</p>
+    </form>
+  </div>
+</div>
+  <script>
+    (function () {
+      const modal = document.getElementById('quote-request');
+      const form = document.getElementById('quote-modal-form');
+      const ctaSource = document.getElementById('quote-cta-source');
+      const triggers = document.querySelectorAll('[data-open-quote-modal]');
+      const closeButtons = document.querySelectorAll('[data-close-quote-modal]');
+
+      if (!modal || !form || !ctaSource || !triggers.length) {
+        return;
+      }
+
+      const openModal = function (sourceLabel) {
+        ctaSource.value = sourceLabel || 'Website enquiry';
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('quote-modal-open');
+        const firstInput = form.querySelector('input[name="name"]');
+        if (firstInput) {
+          window.setTimeout(function () { firstInput.focus(); }, 60);
+        }
+      };
+
+      const closeModal = function () {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('quote-modal-open');
+      };
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          openModal(trigger.getAttribute('data-cta-label'));
+        });
+      });
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener('click', closeModal);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modal.hidden) {
+          closeModal();
+        }
+      });
+
+      
+    }());
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gas Safe Certificates &amp; Checks | Zen Plumbing &amp; Heating</title>
+  <meta name="description" content="Gas Safe certificates, CP12 checks, boiler servicing, leak detection, and compliant gas work across Gravesend, Northfleet, Dartford, and Kent by Zen Plumbing & Heating." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="homepage-v2.css" />
+  <link rel="stylesheet" href="homepage-v3-overrides.css" />
+  <style>
+    .gas-page {
+      background: linear-gradient(180deg, #f7f2ea 0%, #fcfaf6 100%);
+      color: #213043;
+    }
+
+    .gas-page .container,
+    .gas-page .section-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .gas-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 108px 24px 92px;
+      background: linear-gradient(135deg, rgba(19, 38, 63, 0.96) 0%, rgba(24, 48, 78, 0.94) 100%);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .gas-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,39,71,0.96) 0%, rgba(24,47,86,0.92) 55%, rgba(27,54,95,0.92) 100%); opacity: 1; }
+
+    .gas-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .gas-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 12px 24px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #d4b27b 0%, #b58b4f 100%);
+      color: #13263f;
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 30px rgba(181, 139, 79, 0.24);
+    }
+
+    .gas-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+
+    .gas-hero-subtitle {
+      margin: 1.4rem auto 0;
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.16rem;
+      line-height: 1.7;
+    }
+
+    .gas-hero-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .gas-trust-bar {
+      padding: 34px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(200, 164, 106, 0.2);
+    }
+
+    .gas-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .gas-trust-item {
+      min-height: 164px;
+      padding: 26px 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255, 253, 250, 0.98) 0%, rgba(247, 243, 235, 0.98) 100%);
+      border: 1px solid rgba(200, 164, 106, 0.34);
+      box-shadow: 0 16px 34px rgba(17, 31, 47, 0.07);
+      text-align: center;
+    }
+
+    .gas-trust-item h3 {
+      margin: 0 0 10px;
+      color: #17304d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.9rem;
+      line-height: 0.98;
+    }
+
+    .gas-trust-item p {
+      margin: 0;
+      color: #5d6c7c;
+      font-size: 0.97rem;
+      line-height: 1.6;
+    }
+
+    .gas-owner-section,
+    .gas-services-section,
+    .gas-process-section,
+    .gas-gallery-section,
+    .gas-phrases-section,
+    .gas-cta-section {
+      padding: 84px 24px;
+    }
+
+    .gas-owner-section,
+    .gas-process-section {
+      background: #ffffff;
+    }
+
+    .gas-services-section,
+    .gas-phrases-section {
+      background: linear-gradient(180deg, rgba(247, 242, 234, 0.9) 0%, rgba(255, 253, 249, 0.95) 100%);
+    }
+
+    .gas-owner-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .gas-owner-text h2,
+    .gas-section-header h2,
+    .gas-cta-section h2 {
+      margin: 0;
+      color: #17304d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.6rem, 4vw, 4rem);
+      line-height: 0.94;
+    }
+
+    .gas-owner-text p,
+    .gas-section-header p,
+    .gas-process-step p,
+    .gas-service-card p,
+    .gas-gallery-caption,
+    .gas-cta-section p {
+      color: #5d6c7c;
+      line-height: 1.7;
+    }
+
+    .gas-owner-text p {
+      margin: 1rem 0 0;
+      font-size: 1.03rem;
+    }
+
+    .gas-safe-box {
+      margin: 1.5rem 0;
+      padding: 24px 24px 24px 26px;
+      border-left: 4px solid #c8a46a;
+      border-radius: 0 18px 18px 0;
+      background: rgba(19, 38, 63, 0.04);
+      box-shadow: inset 0 0 0 1px rgba(200, 164, 106, 0.12);
+    }
+
+    .gas-safe-box strong {
+      color: #17304d;
+      font-size: 1.15rem;
+    }
+
+    .gas-owner-signature {
+      margin-top: 1.6rem;
+      color: #7a8795;
+      font-style: italic;
+    }
+
+    .gas-owner-image img {
+      width: 100%;
+      border-radius: 28px;
+      display: block;
+      box-shadow: 0 24px 50px rgba(17, 31, 47, 0.14);
+    }
+
+    .gas-section-header {
+      max-width: 760px;
+      margin: 0 auto 54px;
+      text-align: center;
+    }
+
+    .gas-section-header p {
+      margin: 1rem auto 0;
+      font-size: 1.05rem;
+    }
+
+    .gas-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .gas-service-card { border: 1px solid rgba(211, 173, 98, 0.9); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%); box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08); }
+
+    .gas-service-card:hover,
+    .gas-gallery-item:hover img {
+      transform: translateY(-4px);
+    }
+
+    .gas-service-card h3 {
+      margin: 0 0 14px;
+      color: #17304d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2rem;
+      line-height: 0.98;
+    }
+
+    .gas-service-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .gas-service-highlight {
+      display: block;
+      margin-top: 1rem;
+      color: #b58b4f;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .gas-process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 48px;
+    }
+
+    .gas-process-step {
+      padding: 30px 22px 26px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255, 253, 250, 0.98) 0%, rgba(247, 243, 235, 0.98) 100%);
+      border: 1px solid rgba(200, 164, 106, 0.26);
+      box-shadow: 0 18px 36px rgba(17, 31, 47, 0.07);
+      text-align: center;
+    }
+
+    .gas-step-number {
+      width: 58px;
+      height: 58px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #d4b27b 0%, #b58b4f 100%);
+      color: #13263f;
+      font-size: 1.25rem;
+      font-weight: 800;
+      box-shadow: 0 14px 28px rgba(181, 139, 79, 0.22);
+    }
+
+    .gas-process-step h4 {
+      margin: 0 0 12px;
+      color: #17304d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .gas-process-step p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .gas-gallery-section {
+      background: linear-gradient(180deg, #17304d 0%, #13263f 100%);
+      color: #ffffff;
+    }
+
+    .gas-gallery-section .gas-section-header h2,
+    .gas-gallery-section .gas-section-header p {
+      color: #ffffff;
+    }
+
+    .gas-gallery-section .gas-section-header p {
+      opacity: 0.82;
+    }
+
+    .gas-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .gas-gallery-item {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 38px rgba(8, 18, 30, 0.22);
+    }
+
+    .gas-gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gas-gallery-caption-wrap {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 32px 22px 22px;
+      background: linear-gradient(180deg, rgba(19, 38, 63, 0) 0%, rgba(19, 38, 63, 0.88) 100%);
+    }
+
+    .gas-gallery-caption-title {
+      color: #ffffff;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .gas-gallery-caption {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.95rem;
+    }
+
+    .gas-phrases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .gas-phrase-card {
+      padding: 26px 24px;
+      border-left: 4px solid #c8a46a;
+      border-radius: 0 22px 22px 0;
+      background: #ffffff;
+      box-shadow: 0 14px 28px rgba(17, 31, 47, 0.06);
+    }
+
+    .gas-phrase-card p {
+      margin: 0;
+      color: #17304d;
+      font-size: 1.06rem;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .gas-cta-section {
+      background: linear-gradient(135deg, rgba(19, 38, 63, 0.98) 0%, rgba(24, 48, 78, 0.96) 100%);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .gas-cta-section h2,
+    .gas-cta-section p {
+      color: #ffffff;
+    }
+
+    .gas-cta-section p {
+      max-width: 760px;
+      margin: 1rem auto 0;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    .gas-cta-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .gas-cta-note {
+      margin-top: 1.2rem !important;
+      font-size: 0.97rem !important;
+      opacity: 0.78 !important;
+    }
+
+    .gas-cta-note a {
+      color: #d4b27b;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1100px) {
+      .gas-trust-grid,
+      .gas-services-grid,
+      .gas-process-grid,
+      .gas-phrases-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gas-owner-grid,
+      .gas-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .gas-hero,
+      .gas-owner-section,
+      .gas-services-section,
+      .gas-process-section,
+      .gas-gallery-section,
+      .gas-phrases-section,
+      .gas-cta-section,
+      .gas-trust-bar {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .gas-hero {
+        padding-top: 88px;
+        padding-bottom: 76px;
+      }
+
+      .gas-hero-badge {
+        min-height: 46px;
+        padding: 10px 18px;
+        font-size: 0.82rem;
+      }
+
+      .gas-trust-grid,
+      .gas-services-grid,
+      .gas-process-grid,
+      .gas-gallery-grid,
+      .gas-phrases-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gas-gallery-item {
+        min-height: 260px;
+      }
+    }
+  
+.gas-benefits-grid, .gas-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.gas-benefit-card, .gas-service-card, .gas-cta-card { border: 1px solid rgba(211, 173, 98, 0.9); border-radius: 22px; background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%); box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08); }
+@media (max-width: 1100px) { .gas-benefits-grid, .gas-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+@media (max-width: 720px) { .gas-benefits-grid, .gas-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
+
+</style>
+
+<style id="eh-final-gassafe-style">
+
+:root { --eh-gold:#d3ad62; --eh-blue:#2d466f; --eh-navy:#13294b; }
+.hero, .page-hero, .gas-hero, .bath-hero, .ext-hero { text-align:center; }
+.hero-actions, .cta-row, .gas-actions, .bath-actions, .ext-actions {
+  display:flex !important; flex-wrap:wrap; justify-content:center !important; gap:18px !important;
+}
+.btn-primary, .hero .btn-primary, .cta-row .btn-primary {
+  background: var(--eh-gold) !important; color: var(--eh-navy) !important; border:1px solid var(--eh-gold) !important; border-radius:999px !important; box-shadow:none !important;
+}
+.btn-secondary, .hero .btn-secondary, .cta-row .btn-secondary {
+  background: rgba(45,70,111,0.92) !important; color:#fff !important; border:1px solid rgba(255,255,255,0.72) !important; border-radius:999px !important; box-shadow:none !important;
+}
+.gas-service-grid, .bath-trust-grid, .ext-trust-grid, .service-grid, .trust-grid, .benefits-grid, .card-grid {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:18px !important;
+}
+.gas-service-card, .bath-trust-card, .ext-trust-card, .service-card, .trust-card, .benefit-card, .card-grid > * {
+  border:1px solid rgba(211,173,98,0.9) !important; border-radius:24px !important; background:rgba(255,255,255,0.05) !important; box-shadow:none !important;
+}
+.badge, .service-badge, .pill, .chip { background:var(--eh-gold) !important; color:var(--eh-navy) !important; border:1px solid var(--eh-gold) !important; border-radius:999px !important; }
+@media (max-width:980px){ .gas-service-grid, .bath-trust-grid, .ext-trust-grid, .service-grid, .trust-grid, .benefits-grid, .card-grid { grid-template-columns:1fr !important; } }
+
+</style>
+</head>
+<body>
+<header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand-panel">
+          <a class="brand-lockup" href="index.html" aria-label="Zen Plumbing & Heating home">
+            <img src="assets/zen-logo-horizontal.svg" alt="Zen Plumbing & Heating" />
+          </a>
+        </div>
+        <div class="header-microcopy" aria-label="Service area">
+          <p class="header-microcopy-text">Gravesend, Northfleet and the surrounding Kent towns</p>
+        </div>
+        <div class="header-actions">
+          <a class="phone-chip" href="tel:+447713832252" aria-label="Call Zen Plumbing and Heating">
+            <span class="phone-chip-icon">☎</span>
+            <span class="phone-chip-number">+44 7713 832252</span>
+          </a>
+          <a class="callback-btn cta-gold" href="#quote-request" data-open-quote-modal data-cta-label="Request a Callback">Request a Callback</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Primary">
+      <div class="container nav-links">
+        <a href="complete-renovations.html">House and Apartment Renovations</a>
+        <a href="plumbing-heating.html">Plumbing &amp; Heating</a>
+        <a href="gas-safe.html">Gas Safe</a>
+        <a href="bathrooms.html">Bathrooms</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="projects.html">Our Projects</a>
+        
+      </div>
+    </nav>
+
+<main>
+      <section class="gas-hero">
+        <div class="container gas-hero-content">
+          <div class="gas-hero-badge">Gas Safe Registered No. 639154</div>
+          <h1>Gas Safety Certificates &amp; Checks You Can Trust</h1>
+          <p class="gas-hero-subtitle">Legal, compliant, and hassle-free Gas Safety checks for landlords, homeowners, and letting agents across Gravesend, Dartford, and Kent.</p>
+          <div class="gas-hero-actions">
+            <a class="cta-gold" href="#quote-request" data-open-quote-modal data-cta-label="Book Your Gas Safety Check">Book Your Gas Safety Check</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gas-trust-bar">
+        <div class="container gas-trust-grid">
+          <article class="gas-trust-item">
+            <h3>Gas Safe Registered No. 639154</h3>
+            <p>Fully qualified, legally registered, and insured. Your safety and compliance are guaranteed.</p>
+          </article>
+          <article class="gas-trust-item">
+            <h3>Same-Day &amp; Next-Day Available</h3>
+            <p>We know deadlines matter. Fast turnaround on certificates so you're never left non-compliant.</p>
+          </article>
+          <article class="gas-trust-item">
+            <h3>15+ Years Experience</h3>
+            <p>Thousands of Gas Safety checks completed across Kent. No shortcuts, no guesswork.</p>
+          </article>
+          <article class="gas-trust-item">
+            <h3>CP12 Certificates Issued On Site</h3>
+            <p>Your official Gas Safety Record provided immediately after the check. No waiting, no delays.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gas-owner-section">
+        <div class="container gas-owner-grid">
+          <div class="gas-owner-text">
+            <h2>Gas Safety Is Not Optional — And Neither Is the Quality of Your Engineer</h2>
+            <p>I've been carrying out Gas Safety checks across Gravesend, Northfleet, Dartford, and throughout Kent for over 15 years. As a <strong>Gas Safe Registered engineer (No. 639154)</strong>, I take this responsibility seriously — because gas safety isn't just about paperwork, it's about protecting lives.</p>
+            <p>Whether you're a landlord who needs an annual CP12 certificate for your tenant, a letting agent managing multiple properties, or a homeowner who wants peace of mind that your boiler and gas appliances are safe — we provide thorough, honest, and legally compliant checks every single time.</p>
+            <div class="gas-safe-box">
+              <strong>Gas Safe Registration No. 639154</strong><br />
+              We are legally authorised to inspect, service, and certify gas appliances in residential and rental properties. Every check is carried out to Gas Safe Regulations and British Standards.
+            </div>
+            <p>We don't just tick boxes. We inspect every gas appliance, check flues and ventilation, test for leaks, assess boiler performance, and ensure everything meets current safety standards. If something's wrong, we tell you honestly — and we can fix it there and then if you choose.</p>
+            <p>And the best part? <strong>Your CP12 certificate is issued on site.</strong> No waiting days for paperwork. You get your legal documentation immediately, ready for your tenant, letting agent, or insurance company.</p>
+            <div class="gas-owner-signature">— Zen Thaqi, Gas Safe Registered Engineer &amp; Owner, Zen Plumbing &amp; Heating</div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="gas-services-section">
+        <div class="container">
+          <div class="gas-section-header">
+            <h2>Gas Safety Services We Provide</h2>
+            <p>Everything from annual landlord checks to emergency leak investigations — all by a Gas Safe Registered engineer.</p>
+          </div>
+          <div class="gas-services-grid">
+            <article class="gas-service-card">
+              <h3>Landlord Gas Safety Certificates (CP12)</h3>
+              <p>Annual legal requirement for all rented properties. We inspect every gas appliance, flue, and fitting, test for leaks and carbon monoxide risks, and issue your CP12 certificate on site. Compliant, documented, and hassle-free.</p>
+              <span class="gas-service-highlight">Perfect for: Private landlords, letting agents, housing associations</span>
+            </article>
+            <article class="gas-service-card">
+              <h3>Homeowner Gas Safety Checks</h3>
+              <p>Even if you're not a landlord, gas safety matters. We check your boiler, cooker, gas fire, and all pipework for leaks, ventilation issues, and carbon monoxide risks. Peace of mind for your family.</p>
+              <span class="gas-service-highlight">Perfect for: Homeowners, families, recent property buyers</span>
+            </article>
+            <article class="gas-service-card">
+              <h3>Boiler Servicing &amp; Efficiency Checks</h3>
+              <p>Annual boiler servicing keeps your warranty valid, your heating efficient, and your energy bills down. We clean, test, and inspect every component — and spot problems before they become expensive breakdowns.</p>
+              <span class="gas-service-highlight">Perfect for: Warranty maintenance, energy efficiency, winter preparation</span>
+            </article>
+            <article class="gas-service-card">
+              <h3>Gas Leak Detection &amp; Repairs</h3>
+              <p>Smell gas? Suspect a leak? We respond fast with professional leak detection equipment. We locate the source, repair it safely, and test everything before declaring your property safe. Emergency call-outs available.</p>
+              <span class="gas-service-highlight">Perfect for: Emergency call-outs, suspected leaks, safety concerns</span>
+            </article>
+            <article class="gas-service-card">
+              <h3>Gas Appliance Installation &amp; Testing</h3>
+              <p>New boiler, cooker, hob, or gas fire? We install to Gas Safe standards, test thoroughly, and provide the certificate you need for warranty and insurance. No appliance is signed off until it's perfect.</p>
+              <span class="gas-service-highlight">Perfect for: New installations, kitchen renovations, boiler upgrades</span>
+            </article>
+            <article class="gas-service-card">
+              <h3>Carbon Monoxide Alarm Testing</h3>
+              <p>We test and verify your CO alarms during every Gas Safety check. If you don't have them, we advise on correct placement and can install compliant alarms to protect your tenants and family.</p>
+              <span class="gas-service-highlight">Perfect for: Legal compliance, tenant safety, family protection</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+
+      
+
+      <section class="gas-cta-section" id="contact">
+        <div class="container">
+          <h2>Book Your Gas Safety Check Today</h2>
+          <p>Don't risk non-compliance or tenant safety. Speak directly to the Gas Safe Registered engineer who will carry out your check, issue your CP12 certificate on site, and keep your property fully legal.</p>
+          <div class="gas-cta-actions">
+                <a class="cta-gold" href="tel:+447713832252">Call +44 7713 832252 — Speak Directly With Me</a>
+          </div>
+          <p class="gas-cta-note">Or <a href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs.">WhatsApp +44 7713 832252</a> — Zen Thaqi personally replies to every enquiry.</p>
+        </div>
+      </section>
+    </main>
+
+<footer class="footer">
+  <div class="container footer-panel footer-panel-home">
+    <div class="footer-brand footer-brand-home">
+      <img src="assets/zen-logo-reverse.png" alt="Zen Plumbing &amp; Heating logo" />
+      <p class="footer-brand-tagline">Your local expert for plumbing, heating, and renovations across Kent.</p>
+    </div>
+    <div class="footer-actions footer-actions-home">
+      <a class="footer-pill footer-pill-light" href="faq.html">FAQ page</a>
+      <a class="footer-pill footer-pill-light" href="area-we-cover.html">Area We Cover</a>
+      <div class="footer-contact-stack">
+        <a class="footer-phone footer-phone-home footer-phone-gold" href="tel:+447713832252">Call today <strong>+44 7713 832252</strong></a>
+        <a class="footer-whatsapp-home" href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs.">WhatsApp Me</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="quote-modal" id="quote-request" hidden aria-hidden="true">
+  <div class="quote-modal-backdrop" data-close-quote-modal></div>
+  <div class="quote-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+    <button class="quote-modal-close" type="button" aria-label="Close request form" data-close-quote-modal>×</button>
+    <div class="quote-modal-copy">
+      <p class="quote-modal-kicker">Quick request</p>
+      <h2 id="quote-modal-title">Tell us what you need</h2>
+      <p>Fill in the details below and we will send your enquiry to our team.</p>
+    </div>
+    <form class="quote-modal-form" id="quote-modal-form" action="https://formsubmit.co/thaqi_100@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Enquiry" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="ctaSource" id="quote-cta-source" value="Website enquiry" />
+
+      <label class="quote-field">
+        <span>Name</span>
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+
+      <label class="quote-field">
+        <span>Phone</span>
+        <input type="tel" name="phone" autocomplete="tel" required />
+      </label>
+
+      <label class="quote-field">
+        <span>What are you interested in?</span>
+        <textarea name="interest" rows="5" required placeholder="Let us know the service you need, your postcode, if it's urgent, and any key measurements."></textarea>
+      </label>
+
+      <button class="quote-submit" type="submit">Send</button>
+      <p class="quote-modal-note" id="quote-modal-note">When you press Send, your enquiry is sent to our team and we will get back to you as soon as possible.</p>
+    </form>
+  </div>
+</div>
+  </div>
+  <script>
+    (function () {
+      const modal = document.getElementById('quote-request');
+      const form = document.getElementById('quote-modal-form');
+      const ctaSource = document.getElementById('quote-cta-source');
+      const triggers = document.querySelectorAll('[data-open-quote-modal]');
+      const closeButtons = document.querySelectorAll('[data-close-quote-modal]');
+
+      if (!modal || !form || !ctaSource || !triggers.length) {
+        return;
+      }
+
+      const openModal = function (sourceLabel) {
+        ctaSource.value = sourceLabel || 'Website enquiry';
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('quote-modal-open');
+        const firstInput = form.querySelector('input[name="name"]');
+        if (firstInput) {
+          window.setTimeout(function () { firstInput.focus(); }, 60);
+        }
+      };
+
+      const closeModal = function () {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('quote-modal-open');
+      };
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+          event.preventDefault();
+          openModal(trigger.getAttribute('data-cta-label'));
+        });
+      });
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener('click', closeModal);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modal.hidden) {
+          closeModal();
+        }
+      });
+
+      
+    }());
+  </script>
+
+</body>
+</html>
