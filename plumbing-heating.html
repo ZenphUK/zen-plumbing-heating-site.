@@ -542,7 +542,7 @@
         </p>
       </div>
       <div class="cta-actions">
-        <a class="btn-primary" href="#quote-request" data-open-quote-modal data-cta-label="GET FREE QUOTE">GET FREE QUOTE</a>
+              <a class="btn-primary" href="quick-request.html">GET FREE QUOTE</a>
         <a class="btn-secondary" href="https://wa.me/447713832252?text=Hello!%20I%20would%20like%20to%20get%20a%20consultation%20about%20repairs." style="color: var(--zen-navy); background: rgba(16,35,63,0.06); border-color: rgba(16,35,63,0.12);">SPEAK WITH OWNER</a>
       </div>
     </section>
@@ -602,22 +602,24 @@
   </div>
   <script>
     (function () {
-      const modal = document.getElementById('quote-request');
-      const form = document.getElementById('quote-modal-form');
-      const ctaSource = document.getElementById('quote-cta-source');
+      const modal = document.getElementById('quote-request') || document.getElementById('quote-request-modal');
       const triggers = document.querySelectorAll('[data-open-quote-modal]');
-      const closeButtons = document.querySelectorAll('[data-close-quote-modal]');
+      const form = modal ? modal.querySelector('#quote-modal-form, form') : null;
+      const ctaSource = modal ? modal.querySelector('#quote-cta-source, input[name="ctaSource"]') : null;
+      const closeButtons = modal ? modal.querySelectorAll('[data-close-quote-modal]') : [];
 
-      if (!modal || !form || !ctaSource || !triggers.length) {
+      if (!modal || !triggers.length) {
         return;
       }
 
       const openModal = function (sourceLabel) {
-        ctaSource.value = sourceLabel || 'Website enquiry';
+        if (ctaSource) {
+          ctaSource.value = sourceLabel || 'Website enquiry';
+        }
         modal.hidden = false;
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('quote-modal-open');
-        const firstInput = form.querySelector('input[name="name"]');
+        const firstInput = modal.querySelector('input[name="name"], input, textarea');
         if (firstInput) {
           window.setTimeout(function () { firstInput.focus(); }, 60);
         }
@@ -637,7 +639,10 @@
       });
 
       closeButtons.forEach(function (button) {
-        button.addEventListener('click', closeModal);
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          closeModal();
+        });
       });
 
       document.addEventListener('keydown', function (event) {
